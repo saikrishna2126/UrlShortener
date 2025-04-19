@@ -1,8 +1,14 @@
+package com.designProblems.urlShortener.entity;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
 @Entity
+@Data
 @Table(name="usertable")
-class UserTable{
+public class UserTable{
     @Id
-    @GeneratedValue(strategy = GeneratedValueType.Identity)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String username;
 }
